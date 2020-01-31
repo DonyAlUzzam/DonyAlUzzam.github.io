@@ -1,0 +1,122 @@
+
+
+.header {
+  height: 100vh;
+	background-image: linear-gradient(
+		to right bottom, 
+		rgba($color-grey-dark, 0.9),
+		rgba($color-grey-dark-3, 0.9)
+	), url(../img/mar.jpg);
+	background-size: cover;
+  
+  padding-top: 7rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
+
+  @include respond(tab-port){
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @include respond(ipad-pro){
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  &__menu{
+    z-index: 9999;
+  }
+  
+    
+  &__body{
+    width: 100vw;
+
+    .intro{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+
+      text-transform: uppercase;
+      color: $color-white;
+
+      h5{
+        font-size: 3rem;
+        text-align: center;
+        font-weight: normal;
+        animation: moveInTop .5s ease-out .75s;
+        animation-fill-mode: backwards;	
+      }
+      h3{
+        font-size: 7rem;
+        font-weight: bold;
+        text-align: center;
+        animation: moveInRight .5s ease-out .75s;
+        animation-fill-mode: backwards;
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        // membuat background-image menjadi background text
+        -webkit-background-clip: text;
+        // membuat text menjadi transparent agar background text dapat terlihat
+        color: transparent;
+        
+      }
+      p{
+        font-size: 5rem;
+        text-align: center;
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+      }
+
+      &__btn{
+        margin-top: 5rem;
+        display: grid;
+        justify-content: center;
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+      }
+
+      @include respond(tab-port){
+        h5{
+          font-size: 2rem;
+        }
+        h3{
+          font-size: 5rem;
+        }
+        p{
+          font-size: 3.5rem;
+        }
+      }
+
+      @include respond(phone){
+        h5{
+          font-size: 1.5rem;
+        }
+        h3{
+          font-size: 3.5rem;
+        }
+        p{
+          font-size: 2.1rem;
+        }
+      }
+      
+    }
+
+  }
+
+
+  
+}
+
+
+
+/*
+
+&__logo-box{
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+    }
+    &__logo {
+      height: 3.5rem;
+    }
+
+*/

@@ -1,0 +1,86 @@
+.targetgoal{
+  margin-top: -5rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+		to right bottom, 
+		rgba($color-grey-dark-2, 0.95),
+		rgba($color-grey-dark-3, 0.95)
+	), url(../img/target-1955257_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  justify-content: center;
+
+  &--currentgoal{
+    color: $color-white;
+    font-size: 2rem;
+  }
+
+  h3{
+    align-self: center;
+    justify-self: center;
+  }
+
+  p{
+    align-self: center;
+    justify-self: center;
+  }
+
+  ul{
+    align-self: center;
+    justify-self: center;
+  }
+
+
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-white;
+    
+  }
+  
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+  @include respond(tab-port){
+    h3{
+      font-size: 3rem;
+    }
+  
+    p{
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  @include respond(phone){
+    h3{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+
+    ul{
+      display: grid;
+      margin-top: 3rem;
+    }
+
+    li{
+      font-size: 2rem;
+      display: grid;
+      justify-items: center;
+    }
+
+    li span{
+      font-size: 2rem;
+    }
+  }
+
+}

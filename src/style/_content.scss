@@ -1,0 +1,66 @@
+.content {
+  background-color: $color-white;
+  margin-top: -12rem;
+  padding: 15rem 5rem;
+
+
+
+  &__inside {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-row-gap: 1rem;
+    margin-top: 8rem;
+  }
+
+  &__picture {
+    display: grid;
+  }
+
+  &__img {
+    width: 20rem;
+    border-radius: 50%;
+    //background-color: red;
+    justify-self: center;
+    background: linear-gradient(to right bottom,
+        rgba($color-primary-light, 0.9),
+        rgba($color-primary-dark, 0.9));
+
+    border-radius: 50%;
+    transition: all .2s;
+
+    &:hover {
+      // untuk membuat border di antara gambar
+      //outline: 1.5rem solid $color-primary;
+
+      transform: scale(1.05) translateY(-.5px);
+      box-shadow: rgba($color-black, .5) 0 0 10px;
+      border-radius: 50%;
+      z-index: 10;
+    }
+  }
+
+  &__desc {
+    margin-top: 3rem;
+    text-align: center;
+    display: grid;
+    grid-row-gap: 1rem;
+    justify-items: center;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 4rem;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-size: 1.9rem;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      width: 70vw;
+      color: #333333;
+    }
+  }
+}

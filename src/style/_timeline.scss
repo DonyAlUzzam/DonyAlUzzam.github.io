@@ -1,0 +1,224 @@
+.tmnav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-bottom: 5rem;
+
+  button {
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-primary-dark !important;
+      color: $color-white !important;
+      font-weight: bold;
+    }
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+}
+
+.mytimeline {
+  background-color: $color-white;
+  padding: 15rem 5rem;
+  margin-top: -5rem;
+
+  @include respond(phone) {
+    .composition {
+      height: auto;
+    }
+  }
+
+  @include respond(tab-port) {
+    .composition {
+      height: auto;
+    }
+  }
+
+  .timeline {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: .2rem;
+      height: 100%;
+      background: #0272FF;
+    }
+
+    @include respond(phone) {
+      &:before {
+        left: 5%;
+      }
+
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        line-height: normal;
+        position: relative;
+        width: 50%;
+        padding: 1.5rem 4rem;
+        box-sizing: border-box;
+
+        &:nth-child(odd) {
+          float: left;
+          text-align: right;
+          clear: both;
+        }
+
+        &:nth-child(even) {
+          float: right;
+          text-align: left;
+          clear: both;
+        }
+
+        &:nth-child(odd):before {
+          content: '';
+          position: absolute;
+          top: 2rem;
+          width: 1rem;
+          height: 1rem;
+          right: -.6rem;
+          background: rgba($color-primary-dark, 1);
+          border-radius: 50%;
+          box-shadow: 0 0 0 .5rem rgba($color-primary-dark, 0.2);
+        }
+
+        &:nth-child(even):before {
+          content: '';
+          position: absolute;
+          top: 20rem;
+          width: 1rem;
+          height: 1rem;
+          left: -.4rem;
+          background: rgba($color-primary-dark, 1);
+          border-radius: 50%;
+          box-shadow: 0 0 0 .5rem rgba($color-primary-dark, 0.2);
+        }
+
+        h3 {
+          margin: 0;
+          padding: 0;
+          font-weight: 600;
+          color: rgba($color-primary-dark, 1);
+        }
+
+        p {
+          margin: 1.5rem 0 0;
+          padding: 0;
+        }
+
+        .timeline--time h4 {
+          margin: 0;
+          padding: 0;
+          font-size: 1.4rem;
+        }
+
+        &:nth-child(odd) .timeline--time {
+          position: absolute;
+          top: .8rem;
+          right: -16.5rem;
+          margin: 0;
+          padding: .8rem 1.6rem;
+          background: rgba($color-primary-dark, 1);
+          color: #fff;
+          border-radius: 1.8rem;
+          box-shadow: 0 0 0 .4rem rgba($color-primary-dark, 0.3);
+        }
+
+        &:nth-child(even) .timeline--time {
+          position: absolute;
+          top: .8rem;
+          left: -16.5rem;
+          margin: 0;
+          padding: .8rem 1.6rem;
+          background: rgba($color-primary-dark, 1);
+          color: #fff;
+          border-radius: 1.8rem;
+          box-shadow: 0 0 0 .4rem rgba($color-primary-dark, 0.3);
+        }
+
+        @include respond(phone) {
+          line-height: normal;
+          position: relative;
+          width: 95%;
+          padding: 1.5rem 4rem;
+          box-sizing: border-box;
+
+          &:nth-child(odd) {
+            float: right;
+            text-align: left;
+            clear: both;
+          }
+
+          &:nth-child(even) {
+            float: right;
+            text-align: left;
+            clear: both;
+          }
+
+          &:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            width: 1rem;
+            height: 1rem;
+            left: -.3rem;
+            background: rgba($color-primary-dark, 1);
+            border-radius: 50%;
+            box-shadow: 0 0 0 .5rem rgba($color-primary-dark, 0.2);
+          }
+
+          &:nth-child(even):before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            width: 1rem;
+            height: 1rem;
+            right: .6rem;
+            background: rgba($color-primary-dark, 1);
+            border-radius: 50%;
+            box-shadow: 0 0 0 .5rem rgba($color-primary-dark, 0.2);
+          }
+
+          h3 {
+            margin-top: 5rem;
+          }
+
+          &:nth-child(odd) .timeline--time {
+
+            left: 4rem;
+            width: 15rem;
+          }
+
+          &:nth-child(even) .timeline--time {
+            left: 4rem;
+            width: 15rem;
+          }
+        }
+
+      }
+
+    }
+
+    &--content {
+      padding-bottom: 2rem;
+      display: grid;
+      grid-template-rows: repeat(3, max-content);
+    }
+
+
+
+  }
+
+}

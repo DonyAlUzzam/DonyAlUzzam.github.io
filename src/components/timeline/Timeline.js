@@ -23,7 +23,7 @@ class Timeline extends PureComponent {
   };
 
   btnRender = () => (
-    <div class="w3-bar tmnav" style={{paddingLeft: "18em"}}>
+    <div class="w3-bar tmnav">
       <button
         class="w3-bar-item w3-button"
         onClick={() => this.onRouteChange("skill")}
